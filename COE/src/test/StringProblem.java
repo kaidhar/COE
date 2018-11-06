@@ -18,15 +18,18 @@ public class StringProblem {
 		for (char ch : ValueToTest.toCharArray())
 			frequencies.put(ch, frequencies.getOrDefault(ch, 0) + 1);
 
+		
 		// To get the Middle character.
 		for (Entry<Character, Integer> c : frequencies.entrySet()) {
 
 			if (c.getValue() % 2 != 0) {
 				Palmid = (c.getKey().toString());
+				break;
 
 			}
 
 		}
+
 
 		StringBuilder palstart = new StringBuilder("");
 		StringBuilder palend = new StringBuilder("");
@@ -43,6 +46,16 @@ public class StringProblem {
 					palend.append(d.getKey().toString());
 				}
 
+			}
+			else
+			{
+				if(d.getValue()==1)continue;
+				for (int i = 0; i < (count2-1) / 2; i++) {
+					palstart.append(d.getKey().toString());
+
+					palend.append(d.getKey().toString());
+				}
+				
 			}
 
 		}

@@ -18,7 +18,7 @@ public class ExcelProblem {
 	@Test
 	public static void ExcelTask() throws IOException {
 
-		FileInputStream FIS = new FileInputStream(new File("/Users/h895458/Desktop/Workspace/COE/src/test/Test.xlsx"));  // I'm using my data. Will require actual demo data to test it out.
+		FileInputStream FIS = new FileInputStream(new File("/Users/h895458/git/COE/COE/src/test/Test.xlsx"));  // I'm using my data. Will require actual demo data to test it out.
 
 		XSSFWorkbook WB = new XSSFWorkbook(FIS);
 		XSSFSheet Sheet = WB.getSheetAt(0);
